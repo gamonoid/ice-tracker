@@ -1,4 +1,4 @@
-var fprint = require("../index");
+const fprint = require("../lib/fprint");
 
 var ret = fprint.init()
 if(ret) {

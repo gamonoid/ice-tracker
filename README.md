@@ -84,3 +84,10 @@ vagrant ssh
 
 npm install nan
 
+
+## Testing
+```
+cd tools
+node enroll.js --uid 1 --fin 1
+```
+
