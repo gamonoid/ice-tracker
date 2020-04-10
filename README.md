@@ -27,6 +27,13 @@ sudo systemctl status ssh
 sudo usermod -aG sudo osboxes
 ```
 
+### Login to VM 
+- On the VM open terminal and type `hostname -I` to find its ip
+- Use ssh to login (ssh root@<ip>) from your machine (password: osboxes.org))
+```
+ssh osboxes@<ip>
+```
+
 Disable CD ROM by commenting out the additional source
 Uncomment lst two lines
 ```
@@ -43,31 +50,29 @@ deb http://deb.debian.org/debian/ unstable main contrib
 deb-src http://deb.debian.org/debian/ unstable main contrib
 ```
 #### Install nodejs
-
+```
 sudo apt install curl
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt install nodejs
-
+```
 
 ### Debug steps
 #### Install fprint and supporting libraries
-
+```
 sudo apt-get update -y
 sudo apt-get install libfprint0
 sudo apt-get install libfprint-dev
+sudo apt-get install libnode-dev
 sudo apt-get install node-gyp
 sudo apt-get install git
+```
 
 
-### Login to VM
-- On the VM open terminal and type `hostname -I` to find its ip
-- Use ssh to login (ssh root@<ip>) from your machine (password: osboxes.org))
-```
-ssh osboxes@<ip>
-```
 - Goto use home
 ```
+exit
 cd ~
+npm install electron -g
 git clone https://github.com/gamonoid/ice-tracker.git
 cd ice-tracker
 git checkout fprint
@@ -76,10 +81,6 @@ npm install
 
 vagrant up
 vagrant ssh
-
-
-
-
 
 npm install nan
 
