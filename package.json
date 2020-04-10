@@ -14,9 +14,9 @@
   "author": "GitHub",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^8.2.0"
   },
   "dependencies": {
+    "electron": "^8.2.0",
     "graceful-fs": "^4.2.3",
     "nan": "^2.14.0"
   }
