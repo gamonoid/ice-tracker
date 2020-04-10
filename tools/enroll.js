@@ -9,6 +9,7 @@ const options = stdio.getopt({
 });
 
 console.log(options);
+console.log(ret);
 
 if (options.fin < 1 || options.fin > 5) {
   console.log('Finger should be from 1 to 5');
