@@ -23,7 +23,8 @@ if (!ret) {
 
 if(ret) {
   fprint.setDebug(3);
-  var devices = fprint.discoverDevices();
+  const devices = fprint.discoverDevices();
+  console.log(`Devices: ${devices}`);
   if(devices.length > 0) {
     devices.forEach(function(entry) {
       console.log("Found: " + entry);
