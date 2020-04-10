@@ -13,11 +13,12 @@
   ],
   "author": "GitHub",
   "license": "MIT",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
+    "bindings": "^1.5.0",
     "electron": "^8.2.0",
     "graceful-fs": "^4.2.3",
-    "nan": "^2.14.0"
+    "nan": "^2.14.0",
+    "stdio": "^2.1.1"
   }
 }

@@ -15,6 +15,11 @@ if (options.fin < 1 || options.fin > 5) {
   process.exit();
 }
 
+if (!ret) {
+  console.log('Finger print reader error');
+  process.exit();
+}
+
 if(ret) {
   fprint.setDebug(3);
   var devices = fprint.discoverDevices();
